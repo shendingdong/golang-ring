@@ -144,7 +144,7 @@ func (r *Ring) Values() []interface{} {
 *** Unexported methods beyond this point.
 **/
 
-func (r *Ring) capacity() int {
+func (r *Ring) Capacity() int {
 	return len(r.buff)
 }
 
@@ -154,7 +154,7 @@ func (r *Ring) set(p int, v interface{}) {
 }
 
 // gets a value based at a given unmodified index
-func (r *Ring) get(p int) interface{} {
+func (r *Ring) Get(p int) interface{} {
 	return r.buff[r.mod(p)]
 }
 
